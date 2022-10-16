@@ -23,12 +23,10 @@
       <header id='header' class='header site-header'>
         <div class='container sep-after'>
           <div class='header-info'>
-            {{- if eq .Kind "home" -}}
-              <h1 class='site-title title'>{{ .Site.Title }}</h1>
-            {{- else -}}
+            {{- if not (eq .Kind "home") -}}
               <p class='site-title title'>{{ .Site.Title }}</p>
+              <p class='desc site-desc'>{{ .Site.Params.info.description }}</p>
             {{- end -}}
-            <p class='desc site-desc'>{{ .Site.Params.info.description }}</p>
           </div>
         </div>
       </header>
