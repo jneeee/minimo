@@ -2,7 +2,7 @@
 <nav id='main-menu' class='menu main-menu' aria-label='{{ i18n "mainMenu" }}'>
   <div class='container'>
     {{ partial "sidebar/toggler" . }}
-    <dev class="brand"><img class="sitelogo" src="./img/logo.png" alt=""><span>{{ .Site.Title }}</span></dev>
+    <dev class="brand"><img class="sitelogo" src="/img/logo.png" alt=""><span>{{ .Site.Title }}</span></dev>
     <ul>
     {{- range .Site.Menus.main -}}
       {{- $isCurrent := ( or ( $.IsMenuCurrent "main" . ) ( $.HasMenuCurrent "main" . ) ) -}}
